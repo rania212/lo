@@ -2,7 +2,6 @@ package com.example.demo.data;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.util.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -10,8 +9,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class VoitureTest {
 
     @Test
-    void creerVoiture(){
-        assertEquals(1,1);
-    }
+    void creerVoiture() {
+        Voiture voiture = new Voiture("Toyota", 15000);
+        voiture.setId(1);
 
+        assertEquals("Toyota", voiture.getMarque());
+        assertEquals(15000, voiture.getPrix());
+        assertEquals(1, voiture.getId());
+    }
 }
